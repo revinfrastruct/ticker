@@ -1,0 +1,26 @@
+version: "2"
+
+services:
+  logstash:
+    build: logstash/
+    env_file:
+      - logstash/environment.env
+    links:
+      - wordpress
+    volumes:
+      - ./logstash/config:/etc/logstash/conf.d
+    command: -r -f /etc/logstash/conf.d/
+
+  wordpress:
+    build: wordpress/
+    env_file:
+      - wordpress/environment.env
+    ports:
+      - 8080:80
+
+  mysql:
+    image: mariadb:latest
+    env_file:
+      - mysql/environment.env
+    volumes:
+       - ./.volumes/mysql:/var/lib/mysql
