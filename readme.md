@@ -19,8 +19,9 @@ Replace example VARS with real ones, then and complete the Wordpress setup.
 + `$ open http://localhost:8080`
 + Enable `wp-api`, `application-password` and `live-ticker` plugins
 + Create a new Application Password (Users › Your profile › Add new Application Password)
-  - This password should go in `logstash/environemnt.env` as `WORDPRESS_PASS`
+  - Copy password to `logstash/environemnt.env` as `WORDPRESS_PASS`
++ `$ docker-compose down`
 
-Let's launch the complete suite
+Launch all services.
 
 + `$ docker-compose up`
