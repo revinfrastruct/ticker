@@ -9,3 +9,7 @@ RUN git clone https://github.com/georgestephanis/application-passwords.git \
 
 RUN git clone https://github.com/revinfrastruct/ticker-wordpress.git \
               /usr/src/wordpress/wp-content/plugins/ticker-wordpress
+
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
+              chmod a+x wp-cli.phar && \
+              mv wp-cli.phar /usr/local/bin/wp
