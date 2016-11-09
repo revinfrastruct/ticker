@@ -6,4 +6,5 @@ $WP core install --url=http://127.0.0.1:8080 --title=Motkraft --admin_user=admin
 $WP plugin activate wp-api
 $WP plugin activate application-passwords
 $WP plugin activate ticker-wordpress
+$WP plugin activate disable-embeds
 
