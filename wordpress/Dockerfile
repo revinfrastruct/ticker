@@ -27,3 +27,5 @@ RUN mkdir -p /usr/src/wordpress/wp-content/uploads
 
 COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
+COPY tickerimgs.php /usr/src/wordpress/wp-content/mu-plugins/tickerimgs.php
+
