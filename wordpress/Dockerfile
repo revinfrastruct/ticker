@@ -24,7 +24,6 @@ RUN mkdir -p /usr/src/wordpress/wp-content/mu-plugins
 COPY stop-oembed.php /usr/src/wordpress/wp-content/mu-plugins/stop-oembed.php
 
 RUN mkdir -p /usr/src/wordpress/wp-content/uploads
-RUN chmod -R 777 /usr/src/wordpress/wp-content/uploads
 
 COPY uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
