@@ -17,6 +17,9 @@ services:
       - wordpress/environment.env
     ports:
       - 8080:80
+    volumes:
+       - ./.volumes/uploads:/var/www/html/wp-content/uploads
+
 
   mysql:
     image: mariadb:latest
