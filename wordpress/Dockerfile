@@ -23,3 +23,7 @@ RUN curl -O https://downloads.wordpress.org/plugin/disable-embeds.zip && \
 RUN mkdir -p /usr/src/wordpress/wp-content/mu-plugins
 COPY stop-oembed.php /usr/src/wordpress/wp-content/mu-plugins/stop-oembed.php
 
+RUN mkdir -p /usr/src/wordpress/wp-content/uploads
+RUN chmod -R 777 /usr/src/wordpress/wp-content/uploads
+
+
